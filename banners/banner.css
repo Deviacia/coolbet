@@ -1,0 +1,386 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(40, 40, 50);
+    background: linear-gradient(180deg, rgba(40, 40, 50, 1) 0%, rgba(22, 22, 27, 1) 100%);
+
+    width: 100%;
+    min-width: 160px;
+    height: 100%;
+    min-height: 60px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #F1F1F1;
+
+    overflow: hidden;
+}
+
+a {
+    color: #F1F1F1;
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-size: 1.3rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+/* Selectors */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    border: solid 1px #F1F1F1;
+}
+
+.logo,
+.marathon,
+.special,
+.play,
+.site {
+    z-index: 50;
+}
+
+.bear-head {
+    background-image: url(./img/head-bear.png);
+    width: 160px;
+    height: 387px;
+
+    display: block;
+    position: absolute;
+    right: 0;
+
+    animation-name: bear;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* animation-direction: reverse; */
+}
+
+.play-site {
+    z-index: 50;
+}
+
+.play {
+    animation-name: glow;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.logo {
+    background-image: url(./img/1.png);
+    width: 85px;
+    height: 62px;
+    background-size: cover;
+}
+
+.site {
+    color: #A9A8A8;
+    text-transform: lowercase;
+}
+
+/* Media */
+
+@media screen and (max-width: 980px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        background-image: url(./img/2.png);
+        width: 180px;
+        height: 21px;
+        background-size: cover;
+        margin: 0 0 20px 40px;
+    }
+
+    .special {
+        font-size: 48px;
+        line-height: 48px;
+
+        margin: 0 0 10px 40px;
+    }
+
+    .marathon {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #17BEFF;
+
+        margin: 0 0 20px 40px;
+    }
+
+    .play {
+        margin-left: 40px;
+    }
+
+    .site {
+        display: none;
+        margin-left: 40px;
+    }
+
+    .bear-head {
+        background-image: url(./img/head-bear.png);
+        width: 448px;
+        height: 400px;
+
+
+        display: block;
+
+        right: -20px;
+        opacity: 1;
+        animation-name: bear-980;
+        animation-duration: 7s;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .container {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .bear-head {
+        display: none;
+    }
+
+    .logo {
+        background-image: url(./img/2.png);
+        width: 180px;
+        height: 21px;
+        background-size: cover;
+        margin: 0 0 0 20px;
+    }
+
+    .marathon {
+        /* margin: 0 20px 0 0;
+        
+        animation-name: glow;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; */
+
+        display: none;
+    }
+
+    .play {
+        display: flex;
+        margin: 0 20px 0 0;
+    }
+
+    .special,
+    .site {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        background-image: url(./img/1.png);
+        width: 85px;
+        height: 62px;
+        background-size: cover;
+
+        /* margin-bottom: 10px; */
+        margin-left: 0;
+    }
+
+    .play-site {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .play,
+    .site {
+        display: block;
+    }
+
+    .play{
+        margin: 0 0 0 0;
+    }
+
+    .site {
+        margin-left: 0px;
+    }
+
+    .marathon{
+        display: flex;
+        margin: 20px 0 20px 0px;
+    }
+
+    .bear-head {
+        background-image: url(./img/head-bear.png);
+        width: 448px;
+        height: 400px;
+
+        right: -0px;
+        opacity: 0.5;
+
+        display: block;
+
+        animation-name: bear-300;
+        animation-duration: 7s;
+    }
+
+    .special{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 160px) {
+    .bear-head {
+        background-image: url(./img/head-bear.png);
+        width: 448px;
+        height: 400px;
+
+
+        display: block;
+        position: fixed;
+
+        right: -100px;
+        top: 100px;
+        opacity: 1;
+        animation-name: bear-160;
+        animation-duration: 7s;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .marathon,
+    .special {
+        display: none;
+    }
+
+    .logo {
+        background-image: url(./img/1.png);
+        width: 85px;
+        height: 62px;
+        background-size: cover;
+
+        margin-top: 40px;
+    }
+
+    .play-site {
+        display: flex;
+        margin-bottom: 40px;
+    }
+}
+
+/* Keyframes */
+
+@keyframes bear-980 {
+    0% {
+        right: -450px;
+        transform: rotate(0);
+    }
+
+    50% {
+        right: -200px;
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        right: -450px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes bear-468 {
+    0% {
+        right: -600px;
+        transform: rotate(0);
+    }
+
+    50% {
+        right: -100px;
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        right: -600px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes bear-300 {
+    0% {
+        right: -450px;
+        transform: rotate(0);
+    }
+
+    50% {
+        right: -180px;
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        right: -450px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes bear-160 {
+    0% {
+        right: -450px;
+        transform: rotate(0);
+    }
+
+    50% {
+        right: -220px;
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        right: -450px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: none;
+    }
+
+    50% {
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        text-shadow: none;
+    }
+}

@@ -1,0 +1,91 @@
+include mixin.pug
+<!DOCTYPE html>
+    head 
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Ivan Sychev - Coolbet
+        link(rel="stylesheet" href="src/css/style.css")
+        link(rel="stylesheet" href="src/css/media.css")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet")
+    body
+        nav.top-nav
+            .top-nav__wrapper
+                a.top-nav__logo(href='#')
+                    include ../img/Header/logo.svg
+                ul.top-nav__list
+                    +nav-item('Participate')
+                    +nav-item('Number of participants')
+                    +nav-item('Leaders')
+                    +nav-item('Conditions')
+                    a.top-nav__burger(href='javascript:void(0)')
+                        include ../img/Header/burger.svg
+        header.header
+            span.header__bear-green
+            .page-align
+                span.header-content
+                    h1.header-content__heading Feel the taste of 
+                        span.header-content__heading-accent victory
+                    p.subtitle.header-content__subtitle
+                        include ../cta.html
+                    button.button-green I WILL WIN
+                    span.header-scroll-ico
+                        p Scroll down
+                        span.header-scroll-ico__form
+                            span.header-scroll-ico__form-point
+        .container
+            span.container__bear-red
+            span.container__bear-blue
+            .container-wrapper
+                .container-wrapper__content
+                    h2 The number of participants 
+                        span.container-wrapper__content--accent is limited
+                    .container-wrapper__content-counter
+                        p.container-wrapper__content-counter--num 200
+                        p.container-wrapper__content-counter--text of
+                        p.container-wrapper__content-counter--num 549
+                    p.subtitle Competition lasts between 10-25 February.
+        .leaderboard
+            .leaderboard-wrapper
+                .leaderboard-wrapper__content
+                    h2 Table of 
+                        span.leaderboard-wrapper__content--accent Leaders
+                    p.subtitle Leaderboards are updated every day by 13:00 CET.
+                    ul.leaderboard-wrapper__list
+                        li.leaderboard-wrapper__list-item
+                            p 1.
+                            p Deviacia
+                            p.leaderboard-wrapper__list-item--point 50 points
+                            img(src="../img/Container/ee.png", alt="ee")
+                        li.leaderboard-wrapper__list-item
+                            p 2.
+                            p Anelian
+                            p.leaderboard-wrapper__list-item--point 47 points
+                            img(src="../img/Container/ee.png", alt="swed")
+                        li.leaderboard-wrapper__list-item
+                            p 3.
+                            p BiKang
+                            p.leaderboard-wrapper__list-item--point 40 points
+                            img(src="../img/Container/ee.png", alt="fin")
+                        li.leaderboard-wrapper__list-item
+                            p 4.
+                            p TorTik1337
+                            p.leaderboard-wrapper__list-item--point 39 points
+                            img(src="../img/Container/ee.png", alt="fin")
+                        li.leaderboard-wrapper__list-item
+                            p 5.
+                            p XelaGray
+                            p.leaderboard-wrapper__list-item--point 35 points
+                            img(src="../img/Container/ee.png", alt="nor")
+                    a(href="#") Full list
+                .leaderboard-wrapper__rules
+                    h3 Prizes
+                    include ../rules.html
+                    button The terms of participation
+        .conditions
+            .conditions-wrapper
+                h3 Terms & Conditions
+                include ../conditions.html
+                button.button-green I WILL WIN
+        script(src="src/script/jquery-3.5.1.min.js")
+        script(src="src/script/script.js")

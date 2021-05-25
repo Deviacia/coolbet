@@ -1,0 +1,8 @@
+{
+    "compile-hero.disable-compile-files-on-did-save-code": true,
+    "compile-hero.javascript-output-toggle": false,
+    "compile-hero.x-generate-minified-css": false,
+    "compile-hero.x-generate-sourcemap-css": false,
+    "compile-hero.sass-output-directory": "../css",
+    "compile-hero.pug-output-directory": "../../",
+}

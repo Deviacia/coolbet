@@ -1,0 +1,30 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container_w980xh240{
+    width: 980px;
+    height: 240px;
+
+    margin-bottom: 20px;
+}
+
+.container_w468xh60{
+    width: 468px;
+    height: 60px;
+
+    margin-bottom: 20px;
+}
+
+.container_w300xh250{
+    width: 300px;
+    height: 250px;
+    
+    margin-bottom: 20px;
+}
+
+.container_w160xh600{
+    width: 160px;
+    height: 600px;
+}
+
